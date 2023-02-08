@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Spotifu</title>
+    <meta property="og:title" content="Spotifu" />
+    <meta property="og:type" content="webside" />
+    <meta property="og:description" content="Vive la música al máximo, vive Spotifu." />
+    <meta property="og:url" content="https://nieves94.github.io/Spotifu/" />
+    <meta property="og:image"
+        content="data:image/jpeg;base64,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" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./icons/favicon/site.webmanifest">
+
+</head>
+
+<body class="body">
+    <div class="layout">
+        <div class="layout-block">
+            <div class="layout-sidebar">
+                <div class="sidebar">
+                    <header class="logo">
+                        <a href="/" aria-current="page">
+                            <img src="./images/spotifu-logo.png" class="logo-image" width="112" height="32"
+                                alt="Logo de Spotifu">
+                        </a>
+                    </header>
+                    <nav class="menu" aria-label="Principal">
+                        <ul class="menu-list">
+                            <li class="menuItem is-active">
+                                <a href="/" class="link" aria-current="page">
+                                    <i class="icon-home" aria-hidden="true"></i>
+                                    <Span>Inicio</Span>
+                                </a>
+                            </li>
+                            <li class="menuItem">
+                                <a href="/" class="link" aria-current="page">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <Span>Buscar</Span>
+                                </a>
+                            </li>
+                            <li class="menuItem">
+                                <a href="/" class="link" aria-current="page">
+                                    <i class="icon-creditCard" aria-hidden="true"></i>
+                                    <Span>Premium</Span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="list" aria-labelledby="library-navigation">
+                        <h2 class="list-title" id="library-navigation">Tu biblioteca</h2>
+                        <ul class="list-content">
+                            <li class="list-item">
+                                <a href="#" class="link">Creada para ti</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Escuchado recientemente</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Tus Me Gusta</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="list" aria-labelledby="playlist-navigation">
+                        <h2 class="list-title" id="playlist-navigation">Playlist</h2>
+                        <ul class="list-content">
+                            <li class="list-item">
+                                <a href="/seru-giran.html" class="link">Nostalgia</a>
+                            </li>
+                            <li class="list-item">
+                                <span class="elipsis">
+                                    <a href="#" class="link"> Mix Pop</a>
+                                </span>
+                            </li>
+                            <li class="list-item">
+                                <span class="elipsis">
+                                    <a href="#" class="link"> Podcast</a>
+                                </span>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Música Indie</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Modo Acústico</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Mix Rock</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">This is Coldplay</a>
+                            </li>
+                            <li class="list-item">
+                                <span class="elipsis">
+                                    <a href="#" class="link"> Más populares de la semana</a>
+                                </span>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> 90s Rock Anthems</a>
+                            </li>
+                            <li class="list-item">
+                                <span class="elipsis">
+                                    <a href="#" class="link">Descubrimiento semanal</a>
+                                </span>
+                            </li>
+                            <li class="list-item">
+                                <span class="elipsis">
+                                    <a href="#" class="link"> Favoritas de la radio</a>
+                                </span>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Mi lista feliz</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> En tendencia</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Alegre</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link"> Volver a escuchar</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="layout-main" id="mainContainer">
+                <div class="page">
+                    <div class="sticky">
+                        <div class="page-block">
+                            <header class="header" aria-label="Barra superior y menu del usuario">
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="volver" title="Volver">
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrowRight" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <form class="search" action="" role="search"
+                                    aria-label="Buscar por Artistas, canciones o podcast">
+                                    <i class="icon-search" aria-hidden="true"> </i>
+                                    <input type="search" placeholder="Buscar por Artistas, canciones o podcast">
+                                </form>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="searchSpotifu2-component">
+                        <div class="searchSpotifu2-component1">
+                            <span class="searchSpotifu2-title">Rosalía</span>
+                            <span class="searchSpotifu2-subtitle">
+                                Mix Pop <br />
+                                39,954,727 oyentes mensuales
+                            </span>
+                            <button class="button-reproduce" aria-label="Reproducir" title="Reproducir">
+                                REPRODUCIR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+ 
+
+                <table summary="Canciones más populares">
+                    <div class="searchSpotifu-filter2">
+                                  <form role="search" aria-label="Filtrar">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <input type="search" placeholder="Filtrar">
+                                  </form>
+                     </div>
+                            <thead>
+                                <tr>
+                                    <th class="table-icon" scope="col"></th>
+                                    <th class="table-icon" scope="col"></th>
+                                    <th class="table-header" scope="col">Título</th>
+                                    <th class="table-header" scope="col">Artista</th>
+                                    <th class="table-header" scope="col">Album</th>
+                                    <th class="table-header" scope="col"><i class="icon-calendar" aria-hidden="true"></i></th>
+                                    <th class="table-header" scope="col"><i class="icon-clock" aria-hidden="true"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>Despechá</td>
+                                    <td>Rosalía</td>
+                                    <td>Motomami</td>
+                                    <td>2023-01-20</td>
+                                    <td>2:36</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>Besos moja2</td>
+                                    <td>Rosalía</td>
+                                    <td>Motomami</td>
+                                    <td>2021-06-20</td>
+                                    <td>3:49</td>
+                                </tr>
+                    
+                    
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>LLYLM</td>
+                                    <td>Rosalia</td>
+                                    <td>Motomami</td>
+                                    <td>2019-06-20</td>
+                                    <td>2:54</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>La noche de anoche</td>
+                                    <td>Rosalía</td>
+                                    <td>El último tour del mundo</td>
+                                    <td>2019-06-20</td>
+                                    <td>3:23</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>La Fama</td>
+                                    <td>Rosalía</td>
+                                    <td>Motomami</td>
+                                    <td>2022-06-20</td>
+                                    <td>3:08</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td scope="row">Malamente</td>
+                                    <td>Rosalía</td>
+                                    <td>El mal querer</td>
+                                    <td>2020-06-20</td>
+                                    <td>3:25</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="buttonIcon" aria-label="Reproducir" title="Reproducir"> <i class="icon-play"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                      <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                    </i></td>
+                                    <td>Pienso en tu mirá</td>
+                                    <td>Rosalía</td>
+                                    <td>El mal querer</td>
+                                    <td>2020-06-20</td>
+                                    <td>3:25</td>
+                                </tr>
+                            </tbody>
+                    
+                        </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="layout-block">
+            <footer class="layout-bottom">
+                <div class="player">
+                    <div class="player-nowPlaying">
+                        <div class="nowPlaying">
+                            <div class="nowPlaying-cover">
+                                <img src="./images/almendra.jpeg" width="56" height="56"
+                                    title="Plegaria para un niño dormido" alt="Plegaria para un niño dormido">
+                            </div>
+                            <div class="nowPlaying-details">
+                                <div class="nowPlaying-description">
+                                    <a href="#song" class="nowPlaying-title">
+                                        Plegaria para un niño dormido
+                                    </a>
+                                    <a href="#RADWIMPS" class="nowPlaying-artist">
+                                        Spinetta
+                                    </a>
+                                </div>
+                                <div class="nowPlaying-actions">
+                                    <button class="player-control" role="switch" aria-checked="false" aria-label=" Guardar en tu
+                        biblioteca" title="Guardar en tu biblioteca">
+                                        <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-playerControls">
+                        <div class="playerControls">
+                            <div class="playerControls-button" aria-label="Controles de reproducción">
+                                <button class="buttonIcon" aria-label="Anterior" title="Anterior">
+                                    <i class="icon-prev" aria-hidden="true"></i>
+                                </button>
+                                <button class="buttonIcon is-white" aria-label="Reproducir" title="Reproducir">
+                                    <i class="icon-play" aria-hidden="true"></i>
+                                </button>
+                                <button class="buttonIcon" aria-label="Siguiente" title="Siguiente">
+                                    <i class="icon-next" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="playerPlayBack">
+                                <span class="playerPlayBack-progressTime">01:40</span>
+                                <div class="playerPlayBack-slider">
+                                    <div class="slider">
+                                        <div class="slider-progress">
+                                            <button class="slider-button"
+                                                aria-label="Controlar el progreso de la producción"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="playerPlayBack-progressTime">04:01</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-playerVolume">
+                        <div class="playerVolume">
+                            <button class="player-control" aria-label="Silenciar" aria-describedby="volumen-ico">
+                                <i class="icon-volumeUp" id="volumen-icon" role="presentation" aria-label="Volumen alto"
+                                    aria-hidden="true"></i> </button>
+                            <div class="playerVolume-slider">
+                                <div class="slider">
+                                    <div class="slider-progress">
+                                        <button class="slider-button" aria-label="Control de volumen"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
