@@ -1,0 +1,116 @@
+.header {
+    margin-block-end: 1rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
+  
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .page-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+.table-header{
+    width: 20rem;
+    text-align: left;
+    font: var(--baseFontBold);
+    color: var(--gray10);
+    text-transform: uppercase;
+}
+
+.table-icon{
+    width: 2,75rem;
+}
+td{
+    /* width: 2,75rem; */
+    padding-top: 8px;
+ 
+    font: var(--baseFont);
+    color: var(--white);
+}
+
+
+td .buttonIcon {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    font-size: 0.5rem;
+    border: 0.5px solid var(--gray10);
+    color: var(--white);
+}
+td i{
+    display: inline-block;
+ 
+}
+.button-reproduce {
+    color: var(--white);
+    margin-inline-start: 5.34rem;
+    margin-inline-end: 5.34rem;
+    block-size: 2rem;
+    inline-size: 9.56rem;
+    border-radius: 4.375rem;
+    background: var(--primaryColor);
+    
+    opacity: 0.8;
+    transition: 0.5s;
+    border: none;
+  }
+  
+  .button-reproduce:active {
+    transform: scale(0.95);
+  }
+  
+  .button-reproduce:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  .button-filter input {
+    font: var(--button);
+    color: var(--gray10);
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    padding-inline-start: 2rem;
+  }
+  
+  .button-filter {
+    position: relative;
+    flex: 1;
+    inline-size: 69.31rem;
+    margin-inline-start: 0.5rem;
+    /* margin-inline-end: 0.5rem; */
+  }
+  
+  .button-filter i {
+    position: absolute;
+    font-size: 1rem;
+    block-size: 1rem;
+    left: 0.5rem;
+    top: calc(50% - 0.5rem);
+    color: var(--gray20);
+  }
+  
+  .button-filter:focus-within i {
+    color: var(--white);
+    opacity: 0.6;
+  }
+  
+  .button-filter input::-webkit-input-placeholder {
+    color: var(--gray20);
+  }
+
+  .layout-main{
+    block-size: calc(100vh - var(--bottomSize));
+    overflow-x: hidden;
+    min-block-size: var(--minBlockSize);
+}
+.searchSpotifu-filter{
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,38 @@
+.layout-main{
+    block-size: calc(100vh - var(--bottomSize));
+    overflow-x: hidden;
+    min-block-size: var(--minBlockSize);
+}
+#mainContainer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../images/motomami-poster.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin-inline-end: -1rem; */
+    inline-size: 78.57rem;
+    width: 100%;
+}
+
+.searchSpotifu2-component{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5.5rem;
+}
+.searchSpotifu2-title{
+    display: block;
+    font: var(--headline1);
+    color: var(--white);
+    margin-bottom: 1rem;
+    
+}
+.searchSpotifu2-subtitle{
+    display: block;
+    font: var(--baseFont);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.searchSpotifu-filter2{
+    color: var(--white);
+}
+.searchSpotifu-filter2:placeholder-shown{
+color: var(--white);}
